@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/main_page"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/user_main_page" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_file_download_black_24dp"
+            android:title="@string/download_manager" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/view_history" />
+
+        <item
+            android:id="@+id/muted_list"
+            android:icon="@drawable/ic_not_interested_black_24dp"
+            android:title="@string/muted_history" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/app_settings" />
+    </group>
+
+    <item android:title="@string/string_318">
+        <menu>
+            <item
+                android:id="@+id/illust_star"
+                android:icon="@drawable/ic_baseline_palette_24"
+                android:title="@string/string_319" />
+
+           <!-- <item
+                android:id="@+id/novel_star"
+                android:icon="@drawable/ic_baseline_menu_book_24"
+                android:title="@string/string_320" /> -->
+
+            <item
+                android:id="@+id/follow_user"
+                android:icon="@drawable/ic_baseline_how_to_reg_24"
+                android:title="@string/string_321" />
+
+           <!-- <item
+                android:id="@+id/nav_fans"
+                android:icon="@mipmap/fans"
+                android:title="@string/string_322" /> -->
+        </menu>
+
+    </item>
+
+  <!--  <item android:title="@string/the_others">
+        <menu>
+            <item
+                android:id="@+id/nav_new_work"
+                android:icon="@drawable/ic_fiber_new_black_24dp"
+                android:title="@string/latest_work" />
+        </menu>
+    </item> -->
+
+</menu>

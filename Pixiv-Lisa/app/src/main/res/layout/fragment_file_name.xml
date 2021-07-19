@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/refreshLayout"
+            android:layout_above="@+id/submit_linear"
+            android:layout_below="@+id/toolbar"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:id="@+id/now_name"
+                    android:layout_marginStart="@dimen/sixteen_dp"
+                    android:layout_marginTop="@dimen/sixteen_dp"
+                    android:layout_marginBottom="@dimen/twelve_dp"
+                    android:text="@string/string_56"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/file_name"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_below="@+id/now_name"
+                    android:text="@string/string_57"
+                    android:layout_marginBottom="@dimen/sixteen_dp"
+                    android:textSize="20sp"
+                    android:layout_marginStart="@dimen/sixteen_dp"
+                    android:layout_marginEnd="@dimen/sixteen_dp"
+                    android:layout_height="wrap_content">
+
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/file_name"
+                    android:layout_marginTop="20dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/submit_linear"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:text="单P作品，文件名带上p0"
+                android:paddingTop="@dimen/four_dp"
+                android:id="@+id/has_p0"
+                android:paddingBottom="@dimen/four_dp"
+                android:layout_marginStart="@dimen/sixteen_dp"
+                android:layout_height="wrap_content">
+
+            </CheckBox>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/remove_all"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/tweenty_four_dp"
+                    android:layout_marginEnd="@dimen/six_dp"
+                    android:layout_marginBottom="@dimen/eight_dp"
+                    android:layout_weight="1"
+                    android:text="@string/string_58"
+                    android:textColor="#9f9fb4"
+                    app:qmui_backgroundColor="@color/white"
+                    app:qmui_borderColor="#eaebf9"
+                    app:qmui_radius="@dimen/eight_dp">
+
+                </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton>
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/show_now"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/six_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_marginEnd="@dimen/six_dp"
+                    android:layout_marginBottom="@dimen/eight_dp"
+                    android:layout_weight="1"
+                    android:text="@string/string_59"
+                    android:textColor="#9f9fb4"
+                    app:qmui_backgroundColor="@color/white"
+                    app:qmui_borderColor="#eaebf9"
+                    app:qmui_radius="@dimen/eight_dp">
+
+                </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton>
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/save_now"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/six_dp"
+                    android:layout_marginEnd="@dimen/tweenty_four_dp"
+                    android:layout_marginBottom="@dimen/eight_dp"
+                    android:layout_marginTop="@dimen/eight_dp"
+                    android:layout_weight="2"
+                    android:text="@string/string_60"
+                    android:textColor="@color/white"
+                    app:qmui_backgroundColor="?attr/colorPrimary"
+                    app:qmui_borderColor="#eaebf9"
+                    app:qmui_borderWidth="0dp"
+                    app:qmui_radius="@dimen/eight_dp">
+
+                </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

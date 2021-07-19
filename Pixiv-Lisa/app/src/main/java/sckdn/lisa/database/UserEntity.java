@@ -1,0 +1,54 @@
+package sckdn.lisa.database;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.google.gson.Gson;
+
+import sckdn.lisa.model.UserModel;
+
+@Entity(tableName = "user_table")
+public final class UserEntity {
+
+    @PrimaryKey()
+    private int userID;
+    private String userGson;
+    private long loginTime;
+
+    public long getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(long loginTime) {
+        this.loginTime = loginTime;
+    }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "userID=" + userID +
+                ", userGson='" + userGson + '\'' +
+                ", loginTime=" + loginTime +
+                '}';
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public String getUserGson() {
+        return userGson;
+    }
+
+    public void setUserGson(String userGson) {
+        this.userGson = userGson;
+    }
+
+    public UserModel getUser(Gson gson) {
+        return gson.fromJson(userGson, UserModel.class);
+    }
+}
